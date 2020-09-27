@@ -6,8 +6,12 @@ expect.extend({
   },
 });
 
-it("stores only 10 characters", () => {
+test("custom toMatchInlineSnapshot", () => {
   expect("extra long string oh my gerd").toMatchTrimmedInlineSnapshot(
     `"extra long"`
   );
+});
+
+test("toMatchInlineSnapshot", () => {
+  expect("extra long string oh my gerd").toMatchInlineSnapshot(`"extra long"`);
 });
