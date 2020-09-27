@@ -33,7 +33,7 @@ test("custom external toMatchInlineSnapshot", () => {
 });
 
 test("custom async toMatchInlineSnapshot", async () => {
-  await expect("text").toMatchCaseInsensitiveInlineSnapshot(`"text"`);
+  await expect("text").toMatchCaseInsensitiveInlineSnapshot(`"Text"`);
 });
 
 test("toMatchInlineSnapshot", () => {
