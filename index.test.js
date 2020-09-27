@@ -8,10 +8,10 @@ expect.extend({
 
 test("custom toMatchInlineSnapshot", () => {
   expect("extra long string oh my gerd").toMatchTrimmedInlineSnapshot(
-    `"extra long"`
+    `"extra longe"`
   );
 });
 
 test("toMatchInlineSnapshot", () => {
-  expect("extra long string oh my gerd").toMatchInlineSnapshot(`"extra long"`);
+  expect("extra long string oh my gerd").toMatchInlineSnapshot(`"extra longe"`);
 });
