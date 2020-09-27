@@ -17,7 +17,7 @@ test("custom internal toMatchInlineSnapshot", () => {
 test("custom external toMatchInlineSnapshot", () => {
   expect(
     "Some text with uppercase letters."
-  ).toMatchCaseInsensitiveInlineSnapshot(`"some text with uppercase letters."`);
+  ).toMatchCaseInsensitiveInlineSnapshot(`"Some text with uppercase letters."`);
 });
 
 test("toMatchInlineSnapshot", () => {
