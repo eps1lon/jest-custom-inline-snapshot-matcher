@@ -10,13 +10,17 @@ function sleep(timeoutMs) {
 }
 
 expect.extend({
-  toMatchTrimmedInlineSnapshot(received) {
-    return toMatchInlineSnapshot.call(this, received.substring(0, 10));
+  toMatchTrimmedInlineSnapshot(received, inlineSnapshot) {
+    return toMatchInlineSnapshot.call(
+      this,
+      received.substring(0, 10),
+      inlineSnapshot
+    );
   },
   toMatchCaseInsensitiveInlineSnapshot,
-  async toMatchAsyncInlineSnapshot(received) {
+  async toMatchAsyncInlineSnapshot(received, inlineSnapshot) {
     await sleep(1000);
-    return toMatchInlineSnapshot.call(this, received);
+    return toMatchInlineSnapshot.call(this, received, inlineSnapshot);
   },
 });
 
